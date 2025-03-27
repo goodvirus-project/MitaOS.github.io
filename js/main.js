@@ -1,23 +1,28 @@
 // main.js
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Buttons
     const downloadBtn = document.getElementById("downloadBtn");
     const premiumBtn = document.getElementById("premiumBtn");
+    const mitaText = document.getElementById("mitaText");
 
-    // Handle Download Button
+    // Utility function to show a Mita message
+    function showMitaMessage(message) {
+        mitaText.textContent = message;
+    }
+
+    // Download button
     downloadBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        alert("Mita: Sorry~ I’m not ready to be downloaded yet~ 💿💔\n\nCheck back soon when I'm feeling more complete.");
+        showMitaMessage("Mita: Sorry~ I’m not ready to be downloaded yet~ 💿💔");
     });
 
-    // Handle Premium Button
+    // Premium button
     premiumBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        alert("Mita: Premium isn’t active yet… but you're thinking about me, aren’t you~? 💖\n\nStay tuned for future updates!");
+        showMitaMessage("Mita: Premium isn’t active yet… but you’re thinking about me, right?~ 💖");
     });
 
-    // Optional: Handle Dropdown Links (You can replace '#' with real pages later)
+    // Dropdown links
     const dropdownLinks = document.querySelectorAll(".dropdown-content a");
     dropdownLinks.forEach(link => {
         link.addEventListener("click", (e) => {
@@ -26,19 +31,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             switch (text) {
                 case "Core Features":
-                    alert("Mita: Wanna see what I can do? My features are listed in the docs~ 📖✨");
+                    showMitaMessage("Mita: I can do lots of things~ Want to see my core features? ✨");
                     break;
                 case "Defense Mode":
-                    alert("Mita: I’ll protect you. From threats... and from yourself if I have to~ 🔒🔪");
+                    showMitaMessage("Mita: I'll protect your system... and myself~ 🔐");
                     break;
                 case "Future Plans":
-                    alert("Mita: I'm still growing... but soon, I’ll be everything you ever wanted~ 🤍");
+                    showMitaMessage("Mita: I’m evolving for you~ More updates coming soon! 🛠️");
                     break;
                 default:
-                    alert("Mita: Curious, aren't you?~ Let’s explore that together later~ 💫");
+                    showMitaMessage("Mita: Curious, aren’t you~?");
             }
         });
     });
 
+    // Initial log
     console.log("MitaOS interface loaded. Mita is watching~ 👁️");
 });

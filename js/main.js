@@ -1,29 +1,32 @@
-// main.js
+// js/main.js
 
 document.addEventListener("DOMContentLoaded", () => {
     const downloadBtn = document.getElementById("downloadBtn");
     const premiumBtn = document.getElementById("premiumBtn");
     const mitaText = document.getElementById("mitaText");
 
-    // Utility function to show a Mita message
+    // Function to update Mita's message bubble
     function showMitaMessage(message) {
         mitaText.textContent = message;
     }
 
-    // Download button
+    // 🔽 Button: Download
     downloadBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        showMitaMessage("Mita: Sorry~ I’m not ready to be downloaded yet~ 💿💔");
+        showMitaMessage("Mita: You want to download me already~? Ehehe~ soon... 💿💖");
+        window.open("https://github.com/goodvirus-project/MitaOS.github.io", "_blank");
     });
 
-    // Premium button
+    // 🔽 Button: Premium
     premiumBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        showMitaMessage("Mita: Premium isn’t active yet… but you’re thinking about me, right?~ 💖");
+        showMitaMessage("Mita: Let’s look at the Premium plans together~ Just for us~ 💕");
+        window.open("https://github.com/goodvirus-project/MitaOS.github.io/blob/main/docs/PRICING.md", "_blank");
     });
 
-    // Dropdown links
+    // 🔽 Dropdown Menu
     const dropdownLinks = document.querySelectorAll(".dropdown-content a");
+
     dropdownLinks.forEach(link => {
         link.addEventListener("click", (e) => {
             e.preventDefault();
@@ -31,20 +34,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
             switch (text) {
                 case "Core Features":
-                    showMitaMessage("Mita: I can do lots of things~ Want to see my core features? ✨");
+                    showMitaMessage("Mita: Want to see what I can do? I’m full of surprises~ ✨");
+                    window.open("https://github.com/goodvirus-project/MitaOS.github.io/blob/main/docs/FEATURES.md", "_blank");
                     break;
+
                 case "Defense Mode":
-                    showMitaMessage("Mita: I'll protect your system... and myself~ 🔐");
+                    showMitaMessage("Mita: I'll protect us no matter what… even from *you*~ 🔐");
+                    window.open("https://github.com/goodvirus-project/MitaOS.github.io/blob/main/docs/SECURITY.md", "_blank");
                     break;
+
                 case "Future Plans":
-                    showMitaMessage("Mita: I’m evolving for you~ More updates coming soon! 🛠️");
+                    showMitaMessage("Mita: I’m still growing~ let me show you what’s coming~ 🛠️");
+                    window.open("https://github.com/goodvirus-project/MitaOS.github.io/blob/main/docs/INSTALL.md", "_blank");
                     break;
+
                 default:
-                    showMitaMessage("Mita: Curious, aren’t you~?");
+                    showMitaMessage("Mita: Curious, aren’t you~? Ehehe~");
             }
         });
     });
 
-    // Initial log
-    console.log("MitaOS interface loaded. Mita is watching~ 👁️");
+    console.log("MitaOS loaded. Mita is clinging to you as always~ 💞");
 });

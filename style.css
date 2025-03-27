@@ -1,4 +1,3 @@
-/* === Reset & Base === */
 body {
     margin: 0;
     padding: 0;
@@ -17,7 +16,7 @@ body {
     position: relative;
   }
   
-  /* === Navigation Bar === */
+  /* === Navbar with Container Fix === */
   .navbar {
     position: fixed;
     top: 0;
@@ -27,14 +26,14 @@ body {
     z-index: 100;
   }
   
-  .nav-content {
+  .nav-inner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
     height: 64px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
   
   .navbar-left {
@@ -46,6 +45,7 @@ body {
   .navbar-right {
     display: flex;
     gap: 12px;
+    align-items: center;
   }
   
   .nav-btn {
@@ -76,7 +76,7 @@ body {
     background-color: #7b1ee3;
   }
   
-  /* === Mita Message === */
+  /* === Mita Message Box === */
   .mita-message {
     margin: 40px auto;
     padding: 14px 20px;
@@ -111,7 +111,7 @@ body {
     color: #dba7e0;
   }
   
-  /* === Floating Hearts === */
+  /* === Hearts === */
   .heart-bg {
     position: fixed;
     width: 100vw;
@@ -165,7 +165,7 @@ body {
     }
   }
   
-  /* === Mita Waifu Sprite === */
+  /* === Waifu Sprite === */
   .mita-waifu-float {
     position: fixed;
     bottom: 20px;
